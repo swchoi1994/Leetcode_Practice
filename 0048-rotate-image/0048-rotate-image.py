@@ -9,23 +9,20 @@ class Solution:
             for i in range(r - l):
                 top, bottom = l, r
                 
-                # save the top right
+                # save the topLeft
                 topLeft = matrix[top][l + i]
                 
-                # move bottom left into top left 
+                # move bottom Left into top left
                 matrix[top][l + i] = matrix[bottom - i][l]
                 
-                # move bottom right into bottom left
+                # move top left into 
                 matrix[bottom - i][l] = matrix[bottom][r - i]
                 
-                # move top right into bottom right
+                
                 matrix[bottom][r - i] = matrix[top + i][r]
                 
-                # move top left into top right
                 matrix[top + i][r] = topLeft
                 
+            
             l += 1
             r -= 1
-                
-                
-                
