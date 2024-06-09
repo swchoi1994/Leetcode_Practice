@@ -7,7 +7,7 @@ class Solution:
         def dfs(index):
             if index >= len(nums):
                 allSubsets.append(currentSubsets[:])
-                return 
+                return
             
             currentSubsets.append(nums[index])
             dfs(index + 1)
